@@ -83,8 +83,8 @@ def findMedianSortedArrays3(nums1, nums2):
 
 if __name__ == '__main__':
     import time
-    nums1 = [1,2]
-    nums2 = [3,4]
+    nums1 = [1, 2]
+    nums2 = [3, 4]
     
     t0 = time.time()
     print(findMedianSortedArrays1(nums1, nums2))
