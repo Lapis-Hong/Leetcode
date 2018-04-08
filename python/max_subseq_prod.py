@@ -1,5 +1,5 @@
 # coding: utf8
-
+"""O(n) Sulutions"""
 
 def max_subseq_prod(arr):
     """not continuous"""
@@ -24,12 +24,12 @@ def max_subseq_prod(arr):
 
 def max_substr_prod(arr):
     """continuous"""
-    #访问到每个点的时候，以该点为子序列的末尾的乘积，要么是该点本身，要么是该点乘以以前一点为末尾的序列，注意乘积负负得正，故需要记录前面的最大最小值。
-    ret, pos_max, neg_max = arr[0], arr[0], arr[0]
+    # 访问到每个点的时候，以该点为子序列的末尾的乘积，要么是该点本身，要么是该点乘以以前一点为末尾的序列，注意乘积负负得正，故需要记录前面的最大最小值。
+    ret, prod_max, prod_min = arr[0], arr[0], arr[0]
     for n in arr:
-        pos_max = max(n, max(n*pos_max, n*neg_max))
-        neg_max = min(n, min(n*pos_max, n*neg_max))
-        ret = max(ret, pos_max)
+        prod_max = max(n, max(n*prod_max, n*prod_min))
+        prod_min = min(n, min(n*prod_max, n*prod_min))
+        ret = max(ret, prod_max)
     return ret
 
 if __name__ == '__main__':
