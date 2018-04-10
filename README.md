@@ -1,2 +1,2 @@
-# Leetcode
-find the solutions for the problems on leetcode with python and java 
+# Leetcode Algorithm Problems Solutions
+find solutions for the problems on leetcode with c++, java and python
