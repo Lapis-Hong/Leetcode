@@ -1,12 +1,11 @@
 import time
-from python.clock import clock
+
 # two sorted list, the max of second list < the min of first list, find the max element
 a = [100, 101, 102, 104, 200, 400, 500, 1, 2, 3, 4, 5]
 b = range(10000, 20000, 1) + range(1000)
 c = [2, 3, 4, 1]
 
 
-@clock
 def find_max(array):  # better method, faster and stable
     head = 0
     tail = len(array)
