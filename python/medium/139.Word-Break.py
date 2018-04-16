@@ -63,8 +63,7 @@ def wordBreak3(s, wordDict):
         for j in range(i, len(s)):
             if dp[i] and s[i: j + 1] in wordDict:
                 dp[j + 1] = True
-
-    return dp
+    return dp[-1]
 
 
 if __name__ == '__main__':
