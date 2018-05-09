@@ -1,12 +1,24 @@
-# Problem:
-# There are two sorted arrays nums1 and nums2 of size m and n respectively.
-# Find the median of the two sorted arrays.
-# The overall run time complexity should be O(log (m+n)).
+"""Prob 4. Median of Two Sorted Arrays
 
-# Examples:
-# nums1 = [1, 2]
-# nums2 = [3, 4]
-# The median is (2 + 3)/2 = 2.5
+https://leetcode.com/problems/median-of-two-sorted-arrays/description/
+
+Description:
+    There are two sorted arrays nums1 and nums2 of size m and n respectively.
+    Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+    
+    Example 1:
+    nums1 = [1, 3]
+    nums2 = [2]
+    
+    The median is 2.0
+    Example 2:
+    nums1 = [1, 2]
+    nums2 = [3, 4]
+    
+    The median is (2 + 3)/2 = 2.5
+"""
+
+
 def median(nums):
     """
     find the median of a sorted array
@@ -80,26 +92,6 @@ def findMedianSortedArrays3(nums1, nums2):
         return median(nums2)
 
 
-
-if __name__ == '__main__':
-    import time
-    nums1 = [1, 2]
-    nums2 = [3, 4]
-    
-    t0 = time.time()
-    print(findMedianSortedArrays1(nums1, nums2))
-    t1 = time.time()
-
-    print(t1 - t0)
-    t0 = time.time()
-    print(findMedianSortedArrays2(nums1, nums2))
-    t1 = time.time()
-
-    print(t1-t0)
-    t0 = time.time()
-    print(findMedianSortedArrays3(nums1, nums2))
-    t1 = time.time()
-    print(t1 - t0)
 
 
 
